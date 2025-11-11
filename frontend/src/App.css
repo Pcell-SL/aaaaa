@@ -1,0 +1,31 @@
+* {
+  margin:0;
+  padding: 0;
+}
+
+html,
+body {
+  font-size: 18px;
+  background-color: #f5f6f7;
+}
+
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* ocupa todo el viewport */
+}
+/* ya lo tienes */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.App-content {
+  flex: 1;                      /* empuja el footer hacia abajo */
+  display: flex;                /* opcional: si dentro quieres más flex */
+  flex-direction: column;       /* mantiene layout vertical interno */
+}
+

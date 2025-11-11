@@ -1,0 +1,43 @@
+.pdf-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+}
+
+.pdf-modal {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+  height: 80vh;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.pdf-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  z-index: 1200;
+}
+
+.pdf-modal { width: min(1200px, 96vw); max-height: 92vh; }
+.pdf-layout { display: grid; grid-template-columns: 1fr 340px; gap: 12px; height: 80vh; }
+.pdf-view { background: #000; border-radius: 10px; overflow: hidden; }
+@media (max-width: 900px) {
+  .pdf-layout { grid-template-columns: 1fr; }
+  .comments-card { width: 100%; }
+}
+

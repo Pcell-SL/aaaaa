@@ -1,0 +1,190 @@
+/* ========== Variables globales ========== */
+:root {
+  --brand-light: #909c8f;      /* inicio degradado */
+  --brand-dark:  #0077a3;      /* fin degradado + botones */
+  --brand-dark-hover: #005d7d; /* hover btn */
+  --text-dark:  #1f2d3d;
+  --text-light: #ffffff;
+  --gray-100:   #f4f6f8;       /* fondo input */
+  --gray-400:   #a0acb8;       /* placeholder y bordes suaves */
+  --error:      #e74c3c;
+  --radius:     10px;
+  --transition: 0.25s ease;
+  --font-sans:  "Poppins", "Segoe UI", Arial, sans-serif;
+}
+
+/* ---------------------------------------- */
+.login-page {
+  display: flex;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+}
+
+/* ---------- PANEL IZQUIERDO ---------- */
+.login-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  padding: 60px 50px;
+  background: linear-gradient(135deg, var(--brand-light) 0%, var(--brand-dark) 100%);
+  color: var(--text-light);
+  box-sizing: border-box;
+}
+
+.auth-form .btn {
+  width: 180px;       
+  padding: 10px 0;     
+  font-size: 0.95rem;  
+  align-self: center;  
+}
+
+
+
+.auth-logo {
+  width: 10px;
+}
+
+.login-left h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.25;
+  max-width: 520px;
+}
+
+
+
+.login-left p {
+  max-width: 520px;
+  line-height: 1.5;
+  opacity: 0.9;
+  font-size: 1rem;
+
+}
+
+/* ---------- PANEL DERECHO ---------- */
+.login-right {
+  flex: 1;
+  background: #ffffff;
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+  box-sizing: border-box;
+}
+
+.login-right h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--brand-dark);
+  margin-bottom: 36px;
+}
+
+
+/* ========== FORMULARIO ========== */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 360px;
+}
+
+.field-group { display: flex; flex-direction: column; }
+
+.field-group input {
+  width: 100%;
+  padding: 14px 18px;
+  background: var(--gray-100);
+  border: 1px solid var(--gray-100);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  transition: border var(--transition), background var(--transition), box-shadow var(--transition);
+}
+
+.field-group input:focus {
+  outline: none;
+  background: #fff;
+  border: 1px solid var(--brand-dark);
+  box-shadow: 0 0 0 3px rgba(0, 119, 163, 0.25);
+}
+
+.field-group input::placeholder { color: var(--gray-400); }
+
+.error {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: var(--error);
+}
+
+/* ---------- BOTÓN ---------- */
+.btn {
+  padding: 14px;
+  background: var(--brand-dark);
+  color: var(--text-light);
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background var(--transition), transform 0.15s;
+ 
+}
+
+.btn:hover   { background: var(--brand-dark-hover); transform: translateY(-2px); }
+.btn:active  { transform: translateY(0); }
+.btn:disabled{ opacity: 0.6; cursor: not-allowed; }
+
+/* ---------- ENLACES ---------- */
+.auth-nav {
+  margin-top: 26px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.auth-nav a {
+  color: var(--brand-dark);
+  text-decoration: none;
+  transition: opacity var(--transition);
+}
+.auth-nav a:hover { opacity: 0.75; }
+
+
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .login-page      { flex-direction: column; }
+  .login-left,
+  .login-right     { flex: none; width: 100%; }
+  .login-left      { align-items: center; text-align: center; padding: 50px 30px; }
+  .login-left h1,
+  .login-left p    { max-width: 600px; }
+  
+}
+
+/* ------------ LOGO PRINCIPAL ------------- */
+.auth-logo{
+  width: 150px;          
+  height: auto;
+  display: block;
+  margin-bottom: 48px;   
+}
+
+/* versión reducida para móviles */
+@media (max-width: 900px){
+  .auth-logo{
+    width: 120px;
+    margin-bottom: 32px;
+  }
+}
+.error-placeholder {
+  height: 20px;
+  font-size: 0.85rem;
+  color: red;
+  text-align: left;
+  margin-top: 4px;
+}
